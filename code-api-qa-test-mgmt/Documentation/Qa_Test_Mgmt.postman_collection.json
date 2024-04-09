@@ -1,0 +1,1381 @@
+{
+	"info": {
+		"_postman_id": "3d67e728-98d5-4644-9f6b-447ef68f385e",
+		"name": "Qa_Test_Mgmt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "935972",
+		"_collection_link": "https://essence-technologies.postman.co/workspace/ANTS~25360fac-24f1-4c24-b5aa-782cc620bd42/collection/935972-3d67e728-98d5-4644-9f6b-447ef68f385e?action=share&source=collection_link&creator=935972"
+	},
+	"item": [
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "ListAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/project",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"project"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "NormalList",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/project",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"project"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 28 Aug 2023 08:44:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=hYnCh7YWwx2%2FkcuJ3etrRmS%2F1neSaVUU%2BkG9J0bS7ZwBAWMAs4EonS2s8X0fF62tTVISfAIlTk4Qab5tqqFzVmAAls3XrXoTdcVs2d%2FZaPXUL3%2FrZ9Uc4rgvdQQeXpCca8W2n%2Fd%2BLo8%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "NEL",
+									"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "7fdb45d7afc4790d-KTM"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"project_id\": 1,\n        \"title\": \"Business Process Automation\",\n        \"deadline\": \"2023-08-24T11:43:25.153\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Business Process Automation\",\r\n  \"deadline\": \"2023-08-24T11:43:25.153Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/project/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"project",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Result",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Business Process Automation\",\r\n  \"deadline\": \"2023-08-24T11:43:25.153Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/project/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"project",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 28 Aug 2023 08:44:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=FOMj7Ab8iLzXsNAPCXFKmSJ3df4EkfCAQ3a96H79iX2edi1fjMnY7cICEZ%2BR3QMRJcvEbKr4Zxj1e7Y0XDC7PFL0lnSHBz0xZHiK%2F0pakPpufVauO%2FsJ%2F9lb%2FxIN2qjpm4t6dDeFGxA%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "NEL",
+									"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "7fdb45ab884f790d-KTM"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"project_id\": 1,\n    \"title\": \"Business Process Automation\",\n    \"deadline\": \"2023-08-24T11:43:25.153Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Id\": 22,\r\n  \"title\": \"Business Process Automations \",\r\n  \"deadline\": \"2023-08-24T11:28:32.791\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/project/22",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"project",
+								"22"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "result",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"project_id\": 1,\r\n  \"title\": \"Business Process Automation [BPA]\",\r\n  \"deadline\": \"2023-08-24T11:28:32.791\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/project/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"project",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 28 Aug 2023 08:45:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=HO%2BcoUKYfywJ29L66hrphLezL9yABARqqjNhmud71NXxccdw2OIX%2BD%2FtqtmaynfBrp7aaK8bdPI1Kbk2tJ1TNfJJOPpwDf%2BQ5fv7g6aoXljbhl3ytIQ74ZWuViV%2F6mf9hcAvwzXRhZE%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "NEL",
+									"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "7fdb47bed919790d-KTM"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"isSuccess\": true,\n    \"message\": \"Entity updated Successfully\",\n    \"editedEntity\": {\n        \"project_id\": 1,\n        \"title\": \"Business Process Automation [BPA]\",\n        \"deadline\": \"2023-08-24T11:28:32.791\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/project/22",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"project",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/project/21",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"project",
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Module",
+			"item": [
+				{
+					"name": "ListAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Module/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Module",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \r\n        \"modulename\": \"Anish\",\r\n        \"status\": true,\r\n        \"projectid\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Module/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Module",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Module/18",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Module",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 18,\r\n  \"moduleName\": \"sitaram Boss\",\r\n  \"status\": true,\r\n  \"projectId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Module/18",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Module",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Module/17",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Module",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListByProject",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Module/byproject/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Module",
+								"byproject",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test Case",
+			"item": [
+				{
+					"name": "ListAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"test_Title\": \"hello\",\r\n  \"scenario\": \"string\",\r\n  \"description\": \"string\",\r\n  \"preRequisities\": \"string\",\r\n  \"testSteps\": \"string\",\r\n  \"testData\": \"string\",\r\n  \"expectedResult\": \"string\",\r\n  \"status\": true,\r\n  \"module_id\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/TestCase",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestCase"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n  \"test_Title\": \"hello\",\r\n  \"scenario\": \"string\",\r\n  \"description\": \"string\",\r\n  \"preRequisities\": \"string\",\r\n  \"testSteps\": \"string\",\r\n  \"testData\": \"string\",\r\n  \"expectedResult\": \"string\",\r\n  \"status\": true,\r\n  \"module_id\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/TestCase",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"TestCase"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Sep 2023 10:41:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"testTitle\": \"Some Twets Case Title\",\n        \"scenario\": \"Some Twets Case Scenario\",\n        \"description\": \"Some Twets Case description\",\n        \"preRequisities\": \"Some Twets Case preRequisities\",\n        \"testSteps\": \"Some Twets Case testSteps\",\n        \"testData\": \"Some Twets Case testData\",\n        \"expectedResult\": \"Some Twets Case expectedResult\",\n        \"status\": true,\n        \"moduleId\": 2\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "List with Last TestResult",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"test_Title\": \"hello\",\r\n  \"scenario\": \"string\",\r\n  \"description\": \"string\",\r\n  \"preRequisities\": \"string\",\r\n  \"testSteps\": \"string\",\r\n  \"testData\": \"string\",\r\n  \"expectedResult\": \"string\",\r\n  \"status\": true,\r\n  \"module_id\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/TestCase/GetListWithLastResult",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestCase",
+								"GetListWithLastResult"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/TestCase/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestCase",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"testTitle\": \"Some Twets Case Title\",\r\n  \"scenario\": \"Some Twets Case Scenario\",\r\n  \"description\": \"Some Twets Case description\",\r\n  \"preRequisities\": \"Some Twets Case preRequisities\",\r\n  \"testSteps\": \"Some Twets Case testSteps\",\r\n  \"testData\": \"Some Twets Case testData\",\r\n  \"expectedResult\": \"Some Twets Case expectedResult\",\r\n  \"status\": true,\r\n  \"moduleid\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/TestCase",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestCase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n  \"testTitle\": \"string\",\r\n  \"scenario\": \"k cha raja\",\r\n  \"description\": \"string\",\r\n  \"preRequisities\": \"string\",\r\n  \"testSteps\": \"string\",\r\n  \"testData\": \"string\",\r\n  \"expectedResult\": \"string\",\r\n  \"status\": true,\r\n  \"moduleId\": 3\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/TestCase/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestCase",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"testCase_id\": 1,\r\n  \"test_Title\": \"string\",\r\n  \"scenario\": \"string\",\r\n  \"description\": \"string\",\r\n  \"preRequisities\": \"string\",\r\n  \"testSteps\": \"string\",\r\n  \"testData\": \"string\",\r\n  \"expectedResult\": \"string\",\r\n  \"status\": true,\r\n  \"module_id\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/TestCase/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestCase",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test result",
+			"item": [
+				{
+					"name": "List all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"testResult_id\": 2,\r\n        \"testCase_id\": 1,\r\n        \"testedBy\": 1,\r\n        \"actualResult\": \"hi\",\r\n        \"testedOn\": \"2023-08-25T09:40:17.712\"\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/TestResult/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestResult",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/TestResult/9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestResult",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"testCaseid\": 4,\r\n  \"testedBy\": 0,\r\n  \"actualResult\": \"string\",\r\n  \"testedOn\": \"2023-08-25T09:33:37.123Z\",\r\n  \"testedByUser\": \"1\",\r\n    \"userid\": \"2\",\r\n    \"username\": \"string\",\r\n    \"firstName\": \"hero\",\r\n    \"lastName\": \"string\",\r\n    \"password\": \"string\",\r\n    \"role\": \"string\"\r\n  \r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/TestResult",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestResult"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 12,\r\n  \"testCaseId\": 4,\r\n  \"userId\": 2,\r\n  \"status\": true,\r\n  \"testedByUser\": \"string\",\r\n  \"actualResult\": \"string\",\r\n  \"testedOn\": \"2023-09-07T11:55:38.538Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/TestResult/12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestResult",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/TestResult/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestResult",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List with TestCase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/TestResult/byTestcase?testcaseId=4\n",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestResult",
+								"byTestcase"
+							],
+							"query": [
+								{
+									"key": "testcaseId",
+									"value": "4\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateTestResultwithFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "File",
+									"type": "file",
+									"src": "/C:/Users/koolkabin/Pictures/28614.jpg"
+								},
+								{
+									"key": "TestCaseId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "ActualResult",
+									"value": "Uploadin image for testresult of testcase id 2",
+									"type": "text"
+								},
+								{
+									"key": "Status",
+									"value": "True",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/TestResult/CreateTestResult",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"TestResult",
+								"CreateTestResult"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/User/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"User",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/User/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"User",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"username\": \"AnkitAs\",\r\n  \"email\": \"AnkitA@gmail.com\",\r\n  \"firstName\": \"Ankit\",\r\n  \"lastName\": \"chettri\",\r\n  \"role\": 1,\r\n  \"password\": \"Ankit@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/User/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"User",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:5114/api/User/3",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "5114",
+							"path": [
+								"api",
+								"User",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"user_id\": 4,\r\n        \"username\": \"string\",\r\n        \"firstName\": \"string\",\r\n        \"lastName\": \"string\",\r\n        \"password\": \"string\",\r\n        \"role\": \"string\"\r\n    },",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:5114/api/User/",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "5114",
+							"path": [
+								"api",
+								"User",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "SuperAdminLogin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"superadmin@gmail.com\",\r\n  \"password\": \"Admin@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Login/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Login",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"superadmin@gmail.com\",\r\n  \"password\": \"Admin@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/Login/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"Login",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Sep 2023 10:54:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6de77a63-ea73-48de-a8e9-4fb6ed62f64c\",\n    \"userName\": \"SuperAdmin\",\n    \"email\": \"superadmin@gmail.com\",\n    \"isSuperAdmin\": true,\n    \"associatedRoles\": [\n        \"SystemAdmin\",\n        \"SuperAdmin\"\n    ],\n    \"relatedId\": null,\n    \"userType\": null,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImp0aSI6IjAzZjY0M2Q4LTc2YmMtNDhmYS05YzEwLTg1ODRiYWNhYmViNiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6WyJTeXN0ZW1BZG1pbiIsIlN1cGVyQWRtaW4iXSwiZXhwIjoxNjkzOTIyMDUyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjUwMDAiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.GVBZIF8jlNaYKGy2J6zX0tGyprBot4BSrgy4ddIG7CI\",\n    \"expiration\": \"2023-09-05T13:54:12Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Systemuserslogin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQW5raXRBcyIsImp0aSI6IjA5MGMzM2ZiLWM3NTUtNDBmMS1iM2Y0LTJlMWVjMTgzZmRlYSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlN5c3RlbVVzZXJzIiwiZXhwIjoxNjk0NDIyNDQ1LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjUwMDAiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.RiJ68YcILj5bwJVop3qC2MNhaXtjQFoJ0WANdMqLVrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"AnkitA@gmail.com\",\r\n  \"password\": \"Ankit@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Login/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Login",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SystemadminLogin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"AnkitA@gmail.com\",\r\n  \"password\": \"Ankit@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Login/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Login",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Logs",
+			"item": [
+				{
+					"name": "Get Logs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Logs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Logs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://localhost:7128"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiU3VwZXJBZG1pbiIsImp0aSI6IjAzZjY0M2Q4LTc2YmMtNDhmYS05YzEwLTg1ODRiYWNhYmViNiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6WyJTeXN0ZW1BZG1pbiIsIlN1cGVyQWRtaW4iXSwiZXhwIjoxNjkzOTIyMDUyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjUwMDAiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.GVBZIF8jlNaYKGy2J6zX0tGyprBot4BSrgy4ddIG7CI"
+		}
+	]
+}
